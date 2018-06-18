@@ -261,22 +261,28 @@
 				<span class="subheading">Napisz do nas, a na pewno szybko odpowiemy.</span>
 
 
-				<form method="post" action="#" id="contactform">
+				<form action="https://formspree.io/kontakt@profimus.com" id="contactform" method="POST">
 					<div>
 						<label for="name">Imię i nazwisko</label>
 						<input type="text" class="input-field" id="name" name="name" value="">
 					</div>
 					<div>
 						<label for="email">Adres e-mail</label>
-						<input type="text" class="input-field" id="email" name="email" value="">
+						<input type="text" class="input-field" id="email" name="_replyto" value="">
 					</div>
 					<div>
 						<label>Wiadomość</label>
 						<textarea id="message" name="message"></textarea>
 					</div>
-					<a id="button-send" href="#" title="Wyślij Email" class="button" style="width:100%;">Wyślij e-mail</a>
-					<div id="success">Your message has been successfully!</div>
-					<div id="error">Unable to send your message, please try later.</div>
+					<!-- <a id="button-send" href="#" title="Wyślij Email" class="button" style="width:100%;">Wyślij e-mail</a> -->
+					<!-- <div id="success">Your message has been successfully!</div> -->
+					<!-- <div id="error">Unable to send your message, please try later.</div> -->
+
+					<input type="hidden" name="_subject" value="Nowy kontakt z Profimus" />
+					<input type="hidden" name="_language" value="pl" />
+					<input type="text" name="_gotcha" style="display:none" />
+
+					<input type="submit" value="Send">
 				</form>
 
 			</div>

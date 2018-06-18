@@ -13,34 +13,34 @@ $(document).ready(function(){
       slideshowSpeed: 5500
     });
 	
-	$('#button-send').click(function(event){
-		$('#button-send').html('Sending E-Mail...');
-		event.preventDefault();
+	// $('#button-send').click(function(event){
+	// 	$('#button-send').html('Sending E-Mail...');
+	// 	event.preventDefault();
 		
-		$('html, body').scrollTo( $('#contact'), 'fast' );
-		$.ajax({
-			type: 'POST',
-			url: 'send_form_email.php',
-			data: $('#contact_form').serialize(),
-			success: function(html) {
-				if(html.success == '1')
-				{
-					$('#button-send').html('Send E-Mail');
-					$('#success').show();
-				}
-				else
-				{
-					$('#button-send').html('Send E-Mail');
-					$('#error').show();
-				}					
-			},
-			error: function(){
-				$('#button-send').html('Send E-Mail');
-				$('#error').show();
-			}
-		});
+	// 	$('html, body').scrollTo( $('#contact'), 'fast' );
+	// 	$.ajax({
+	// 		type: 'POST',
+	// 		url: 'send_form_email.php',
+	// 		data: $('#contact_form').serialize(),
+	// 		success: function(html) {
+	// 			if(html.success == '1')
+	// 			{
+	// 				$('#button-send').html('Send E-Mail');
+	// 				$('#success').show();
+	// 			}
+	// 			else
+	// 			{
+	// 				$('#button-send').html('Send E-Mail');
+	// 				$('#error').show();
+	// 			}					
+	// 		},
+	// 		error: function(){
+	// 			$('#button-send').html('Send E-Mail');
+	// 			$('#error').show();
+	// 		}
+	// 	});
 		
-	});
+	// });
 	
 	
 });
